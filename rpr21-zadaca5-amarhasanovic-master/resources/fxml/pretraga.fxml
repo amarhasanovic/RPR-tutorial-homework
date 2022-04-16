@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints vgrow="NEVER" />
+    <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" GridPane.rowIndex="2">
+         <content>
+            <ListView fx:id="lvPaths" />
+         </content>
+      </ScrollPane>
+      <HBox spacing="5.0">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" text="%uzorak" />
+            <TextField fx:id="search" alignment="CENTER" />
+            <Button fx:id="pretragaBtn" mnemonicParsing="false" onAction="#traziAction" text="%pretraga" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="5.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.ZadacaController">
+   <stylesheets>
+       <URL value="@zadaca3.css" />
+   </stylesheets>
+    <children>
+      <GridPane alignment="CENTER_LEFT" hgap="5.0" vgap="5.0" VBox.vgrow="NEVER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="157.199951171875" minWidth="10.0" prefWidth="47.40001602172852" />
+            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="fldText" alignment="CENTER_RIGHT" editable="false" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER" />
+            <Slider fx:id="sliderStudents" blockIncrement="5.0" max="15.0" min="5.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Slider>
+            <ChoiceBox fx:id="choiceColor" maxWidth="1.7976931348623157E308" onAction="#colorChange" prefHeight="26.0" prefWidth="123.0" GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER" />
+            <Button fx:id="unosBtn" mnemonicParsing="false" onAction="#otvoriNovi" text="Unos studenta" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </GridPane>
+      <GridPane VBox.vgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="248.80000915527341" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="165.59999084472656" minWidth="10.0" prefWidth="165.59999084472656" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <ListView fx:id="lvStudents" prefHeight="260.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+            <GridPane hgap="3.0" maxHeight="180.0" maxWidth="180.0" prefHeight="180.0" prefWidth="120.0" vgap="3.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btn7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="7" />
+                  <Button fx:id="btn8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="8" GridPane.columnIndex="1" />
+                  <Button fx:id="btn9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="9" GridPane.columnIndex="2" />
+                  <Button fx:id="btn4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="4" GridPane.rowIndex="1" />
+                  <Button fx:id="btn5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="btn6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="btn1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="1" GridPane.rowIndex="2" />
+                  <Button fx:id="btn2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="btn3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="btn0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#numericPress" styleClass="numericBtn" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

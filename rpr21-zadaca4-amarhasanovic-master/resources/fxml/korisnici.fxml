@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@/css/korisnici.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="200" minWidth="200" />
+      <ColumnConstraints maxWidth="100" minWidth="100" />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints vgrow="ALWAYS" />
+      <RowConstraints vgrow="ALWAYS" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <MenuBar GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+        <menus>
+          <Menu text="%_fajl">
+            <items>
+              <MenuItem fx:id="saveMenuItem" onAction="#saveAction" text="%_save" />
+                  <MenuItem fx:id="printMenuItem" onAction="#printReportAction" text="%_printaj" />
+                  <Menu text="%_jezik">
+                    <items>
+                      <MenuItem fx:id="bsJezik" mnemonicParsing="false" onAction="#promijeniBsAction" text="Bosanski" />
+                        <MenuItem fx:id="enJezik" mnemonicParsing="false" onAction="#promijeniEnAction" text="English" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exitMenuItem" onAction="#exitAction" text="%e_xit" />
+            </items>
+          </Menu>
+          <Menu text="%_help">
+            <items>
+              <MenuItem fx:id="aboutMenuItem" onAction="#aboutAction" text="%_about" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="listKorisnici" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.rowSpan="6" />
+      <Label text="%ime" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="fldIme" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label text="%prezime" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="fldPrezime" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label text="%email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="fldEmail" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Label text="%korisnicko_ime" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField fx:id="fldUsername" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Label text="%lozinka" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <PasswordField fx:id="fldPassword" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="7">
+        <buttons>
+            <Button fx:id="btnObrisi" mnemonicParsing="false" onAction="#obrisiAction" text="%obrisi" />
+            <Button fx:id="btnDodaj" mnemonicParsing="false" onAction="#dodajAction" text="%dodaj" />
+            <Button fx:id="btnKraj" cancelButton="true" mnemonicParsing="false" onAction="#krajAction" text="%kraj" />
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="imgKorisnik" maxHeight="135.0" maxWidth="140.0" minHeight="135.0" minWidth="140.0" mnemonicParsing="false" onAction="#imgKorisnikAction" prefHeight="135.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <graphic>
+            <ImageView fx:id="btnImage" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true">
+               <viewport>
+                  <Rectangle2D minX="128.0" minY="128.0" />
+               </viewport>
+            </ImageView>
+         </graphic></Button>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="5.0" right="5.0" />
+   </padding>
+</GridPane>

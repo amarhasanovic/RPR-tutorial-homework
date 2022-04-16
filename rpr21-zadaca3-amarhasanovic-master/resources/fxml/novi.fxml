@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<GridPane alignment="CENTER" hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.NoviController">
+   <stylesheets>
+      <URL value="@noviController.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints valignment="CENTER" />
+      <RowConstraints valignment="CENTER" />
+      <RowConstraints valignment="CENTER" />
+   </rowConstraints>
+   <children>
+      <Label text="Unesite ime studenta (minimalno 10 karaktera):" GridPane.columnSpan="2" />
+      <Label text="Ime i prezime:" GridPane.rowIndex="1" />
+      <TextField fx:id="fldIme" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <buttons>
+          <Button fx:id="okBtn" defaultButton="true" mnemonicParsing="false" onAction="#okAction" text="Ok" />
+            <Button fx:id="cancelBtn" cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
