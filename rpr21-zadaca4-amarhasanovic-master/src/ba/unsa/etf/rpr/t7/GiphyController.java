@@ -28,7 +28,7 @@ public class GiphyController {
     private String odabranaSlika;
     private Image slika;
 
-    final private String APIKEY = "MZjfw0IDch9j6tRyEvOuGgatG17mawPO";
+    //APIKEY
 
     KorisniciModel model = KorisniciModel.getInstance();
 
